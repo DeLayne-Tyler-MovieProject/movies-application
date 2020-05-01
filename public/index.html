@@ -6,57 +6,86 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css" />
 
+
 </head>
 <body>
+        <h1>Movie Listings</h1>
 
-    <div id="movie-list" class="container">
+    <div id="movie-list" class="row col-12 m-5 d-flex justify-content-center align-items-center">
         <h2>loading...</h2>
     </div>
 
 <!--    ADD MOVIE FORM-->
 
     <form id="new-movie-form">
-        <div class="form-group col-3">
-            <label for="add-movie">Add a New Movie</label>
-            <select class="form-control" id="movie-rating">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <input class="form-control" type="text" id="add-movie" placeholder="Title">
-            <button type="button" class="btn btn-primary" id="add-movie-btn">Submit</button>
+        <div class="row m-5 d-flex justify-content-center align-items-center">
+            <div class="form-group col-3 text-center">
+                <label for="add-movie">Add a New Movie</label>
+                <select class="form-control" id="movie-rating">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <input class="form-control" type="text" id="add-movie" placeholder="Title">
+                <button type="button" class="btn btn-primary" id="add-movie-btn">Submit</button>
+            </div>
+
+
+    <!--EDIT MOVIE FORM-->
+
+            <div id="edit-movie"  class="form-group col-3 text-center">
+                <label for="movie-id">Edit Movie Selection by ID</label>
+                <input type="text" class="form-control mb-1" id="movie-id" placeholder="Movie ID">
+                <input type="text" class="form-control" id="title-edit" placeholder="Edit Title">
+                <select class="form-control" id="edit-movie-rating">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+
+    <!--            edit movie button-->
+                <button type="button" class="btn btn-primary" id="edit-movie-btn">Submit</button>
+            </div>
         </div>
     </form>
 
 
-<!--EDIT MOVIE FORM-->
+        <script src="./main.js"></script>
 
-    <form>
-        <div id="edit-movie"  class="form-group col-3">
-            <label for="movie-id">Edit Movie Selection by ID</label>
-            <input type="text" class="form-control mb-1" id="movie-id" placeholder="Movie ID">
-            <input type="text" class="form-control" id="title-edit" placeholder="Edit Title">
-            <select class="form-control" id="edit-movie-rating">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--        <script src="js/keys.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
 
-<!--            edit movie button-->
-            <button type="button" class="btn btn-primary" id="edit-movie-btn">Submit</button>
-        </div>
-    </form>
+<!--Began working on getting movie poster with basic syntax planned on translating it into api js when I can see it was working-->
+<!--        <script>-->
+<!--           $(document).ready(function(){-->
+<!--               var url = "http://www.omdbapi.com/?i=tt3896198&apikey=560a03da"-->
+<!--                $.get(url).done(function(omdbapiResponse){-->
+<!--                    var moviePoster = omdbapiResponse.movie.title;-->
+<!--                $('#movie-list').attr('src', moviePoster.poster);-->
+
+<!--                }).fail(function (errors) {-->
+<!--                    console.errors(errors);-->
+<!--                });-->
+
+
+<!--           });-->
+
+
+<!--        </script>-->
 
 
 
 
-    <script src="./main.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
