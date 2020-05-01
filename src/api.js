@@ -89,7 +89,7 @@ const movie = {
                 let movieTitle = '';
                 let html = '';
                 data.forEach((movies) => {
-                    html += (`<div class="card text-center">
+                    html += (`<div class="card text-center"">
                     <div class="card-header">
                         <h4>Title:</h4> ${movies.title} </div>
                         <h4>Rating:</h4> ${movies.rating}
