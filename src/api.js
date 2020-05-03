@@ -89,15 +89,19 @@ const movie = {
                 let movieTitle = '';
                 let html = '';
                 data.forEach((movies) => {
-                    html += (`<div class="card text-center">
-                    <div class="card-header">
-                        <h4>Title:</h4> ${movies.title} </div>
-                        <h4>Rating:</h4> ${movies.rating}
-                        <h4>Id:</h4> ${movies.id}
-                    </div>
-                    <div></div>
-                    <button data-id=${movies.id} class="movie_edit" >edit</button>
-                    <button data-id=${movies.id} class="delete_movie" >delete</button>`);
+                    html += (`<div class="card text-center ml-5" style="height: 30rem; width: 18rem;">
+                                <div class="card-header">
+                                     </div>
+                                    <h2 class="mt-3 mb-2">${movies.title}</h2>
+                                    <h5 class="mb-3">Rating: ${movies.rating}</h5> 
+                                     
+                                    <div>
+                                    <button data-id=${movies.id} class="movie_edit btn btn-primary btn-sm mx-0 mb-2" style="width: 6rem;" >edit</button>
+                                    <button data-id=${movies.id} class="delete_movie btn btn-primary btn-sm mx-0 mb-2" style="width: 6rem;">delete</button>
+                                    </div>
+                                </div>
+                    `);
+
                     movieTitle = `${movies.title}`
                 });
                 // add movie
